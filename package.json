@@ -1,0 +1,27 @@
+{
+  "name": "react-monorepo",
+  "version": "1.0.0",
+  "description": "This project showing an example of Monorepo structure where two modules are used `application-framework` and `application-main`.",
+  "main": "index.js",
+  "scripts": {
+    "all": "npm-run-all -s framework:build framework:link main:link",
+    "framework:build": "cd application-framework && npm run unlink && npm run build && npm run link",
+    "framework:link": "cd ..",
+    "main:link": "cd application-main && npm run unlink && npm run link && npm run dev"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://himanshu077:{token-here}@github.com/himanshu077/react-monorepo.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/himanshu077/react-monorepo/issues"
+  },
+  "homepage": "https://github.com/himanshu077/react-monorepo#readme",
+  "devDependencies": {
+    "mini-css-extract-plugin": "^2.8.1",
+    "npm-run-all": "^4.1.5"
+  }
+}
