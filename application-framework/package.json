@@ -11,7 +11,7 @@
     "registry": "https://npm.pkg.github.com/"
   },
   "scripts": {
-    "build": "node init && webpack --mode=production",
+    "build": "webpack --mode=production",
     "tsc:init": "tsc --init",
     "serve": "npx serve -s dist",
     "link": "npm link",
